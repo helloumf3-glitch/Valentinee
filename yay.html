@@ -2,28 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>YAY!</title>
+  <title>🙂</title>
+
   <style>
     body {
-      background: #ffd6e0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 0;
+      width: 100vw;
       height: 100vh;
+      overflow: hidden;
+      background: url("Screenshot (26).png") no-repeat center center;
+      background-size: cover;
+      position: relative;
       font-family: Arial, sans-serif;
     }
-    .yay {
-      text-align: center;
+
+    /* Center GIF */
+    .gif-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
     }
-    h1 {
-      font-size: 50px;
+
+    .gif-container img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 0 40px rgba(255,0,0,0.6);
+    }
+
+    /* Moving 🖕🏻 */
+    .finger {
+      position: absolute;
+      font-size: 60px;
+      z-index: 3;
+      animation: moveAround 6s infinite linear;
+    }
+
+    @keyframes moveAround {
+      0%   { top: 10%; left: 10%; }
+      25%  { top: 70%; left: 20%; }
+      50%  { top: 40%; left: 80%; }
+      75%  { top: 80%; left: 60%; }
+      100% { top: 10%; left: 10%; }
     }
   </style>
 </head>
+
 <body>
-  <div class="yay">
-    <h1>YAY! 🎉💖</h1>
-    <p>You just made someone very happy 😌</p>
+
+  <!-- Middle GIF -->
+  <div class="gif-container">
+    <img src="Screenshot (27).png" alt="gotcha">
   </div>
+
+  <!-- Moving Emoji -->
+  <div class="finger">🖕🏻</div>
+
 </body>
 </html>
